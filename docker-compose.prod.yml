@@ -1,0 +1,10 @@
+version: '3.8'
+services:
+  web-prod:
+    build:
+      context: .
+      dockerfile: Dockerfile.prod
+    container_name: landing-page-prod
+    ports:
+      - "8086:80"
+    restart: unless-stopped
